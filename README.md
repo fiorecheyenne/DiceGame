@@ -13,3 +13,5 @@ First, the user is asked a series of questions and the responses are stored.
 4. What is the users name
 
 Then, the dice are then rolled and the results are printed.
+
+<img src="/dicegame.gif">
