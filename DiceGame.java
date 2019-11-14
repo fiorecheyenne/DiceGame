@@ -1,9 +1,41 @@
 
 import java.util.Scanner;
 import java.text.NumberFormat;
+import java.util.Random;
 
-public class arenafight {
-        
+public class DiceGame {
+  
+    //Main Die class 
+    static class Die {
+      private Random random;
+      private int sides;
+    
+    //Default constructor     
+    public Die() {
+     sides = 6;
+     random = new Random();
+    }
+    
+    //Paramaterized constructor
+    public  Die(int sides) {
+      this.sides = sides;
+      random = new Random();
+      if (sides < 4) {
+        throw new IllegalArgumentException("A Die cannot have less than 4 sides");
+      } return;
+    }
+    
+    //Method to get num sides 
+    public int getNumSides() { 
+        return sides;
+    }
+    
+    //Method to roll the dice 
+    public int roll() {
+      return random.nextInt(sides) +1;
+    }
+    
+    }
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
@@ -39,9 +71,12 @@ public class arenafight {
         //Display experiment by user name, only displaying the first 5 characters of name 
          String cutString = uName.substring(0,5);
         System.out.println("\nExperiment by: " + cutString);
+        
+        //Close Scanner
+        input.close();
 
         //Calling default constructor 
-            Die dice = new Die();
+           Die dice = new Die();
             // System.out.println(dice.getNumSides());
 
         //Calling paramaterized constructor 
@@ -86,3 +121,4 @@ public class arenafight {
 }
     }
 }
+
