@@ -1,6 +1,6 @@
 # DiceGame
 
-First time coding in Java - A dice game
+A dice game made using Java
 
 The game has two die. One die has 6 sides, while the user determines how many sides the other has.
 The user is given $3 if the total is less than 5 and $8 if the total is equal to 5. If the total is more than 5, the user loses \$2.
